@@ -97,8 +97,8 @@ function uninstallCommands() {
   }
 }
 
-// --- COMMAND: ULTRAAGENTS (GENERATE AGENTS.MD LOCALLY) ---
-function generateUltraAgentsMD() {
+// --- COMMAND: AGENTS (GENERATE AGENTS.MD LOCALLY) ---
+function generateAgentsMD() {
   try {
     const targetPath = path.join(process.cwd(), 'AGENTS.md');
     const srcDir = path.join(__dirname, 'src');
@@ -140,9 +140,9 @@ if (command === 'install') {
 } else if (command === 'uninstall') {
   console.log("🧹 Uninstalling OMO Ultra Commands...");
   uninstallCommands();
-} else if (command === 'ultraagents') {
+} else if (command === 'agents') {
   console.log("📄 Generating AGENTS.md...");
-  generateUltraAgentsMD();
+  generateAgentsMD();
 } else {
-  console.log("Usage: bunx github:your-username/omo-ultracommands <install|uninstall|ultraagents>");
+  console.log("Usage: bunx github:your-username/omo-ultracommands <install|uninstall|agents>");
 }
