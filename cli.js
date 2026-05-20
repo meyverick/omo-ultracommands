@@ -102,20 +102,18 @@ function generateAgentsMD() {
   try {
     const targetPath = path.join(process.cwd(), 'AGENTS.md');
     const srcDir = path.join(__dirname, 'src');
+    
+    const headerPath = path.join(srcDir, 'AGENTS.md');
     const pillarsPath = path.join(srcDir, 'foundational_pillars.md');
 
+    if (!fs.existsSync(headerPath)) {
+      throw new Error("AGENTS.md (header template) is missing from the src directory.");
+    }
     if (!fs.existsSync(pillarsPath)) {
       throw new Error("foundational_pillars.md is missing from the src directory.");
     }
 
-    const topPart = `# Code Generation & Architecture Directives
-
-## Primary Mandate
-
-All code generation, system design, and refactoring tasks must strictly adhere to the foundational software engineering principles outlined below.
-
----`;
-
+    const topPart = fs.readFileSync(headerPath, 'utf8');
     const pillarsContent = fs.readFileSync(pillarsPath, 'utf8');
     
     // Trim and stitch them together with exactly one blank line in between
