@@ -24,5 +24,3 @@ Before planning or writing any code, you must internalize the foundational pilla
 5. Do not stop until the feature is complete and 100% compliant with the system directives below.
 
 ---
-
-# FOUNDATIONAL PILLARS (SYSTEM DIRECTIVES)

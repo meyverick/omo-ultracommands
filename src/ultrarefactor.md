@@ -26,5 +26,3 @@ Your absolute, unyielding standard for this task is the Foundational Pillars of 
 5. **Continuous Execution:** Do not stop looping until the `AUDIT_REPORT.md` is fully resolved and the codebase is 100% compliant with the foundational pillars below.
 
 ---
-
-# FOUNDATIONAL PILLARS (SYSTEM DIRECTIVES)
