@@ -34,7 +34,7 @@ function installCommands() {
 
       if (fs.existsSync(sourcePath)) {
         const baseCommand = fs.readFileSync(sourcePath, 'utf8');
-        const compiledCommand = `${baseCommand}\n\n${pillarsContent}`;
+        const compiledCommand = `${baseCommand.trimEnd()}\n\n${pillarsContent.trimStart()}`;
         fs.writeFileSync(destPath, compiledCommand, 'utf8');
         injectedCount++;
         console.log(`✅ Installed: /${file.replace('.md', '')}`);
