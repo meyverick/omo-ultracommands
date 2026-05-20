@@ -1,0 +1,13 @@
+{
+  "name": "omo-ultracommands",
+  "version": "1.0.0",
+  "description": "Elite AI architectural commands (ultracode, ultrarefactor) for Oh My OpenAgent",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "omo-ultracommands": "./cli.js"
+  },
+  "keywords": ["opencode", "oh-my-openagent", "ai", "architecture"],
+  "author": "Meyverick",
+  "license": "MIT"
+}
